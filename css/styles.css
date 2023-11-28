@@ -1,0 +1,394 @@
+/*
+//   project-name.........: Song Hunter
+//	project-description..: Object-Oriented Programing Game Application. Guess the song name.
+//   filename.............: styles.css
+//	file-description.....: Style-sheet
+//	for..................: Team Treehouse Full-Stack Javascript Techdegree Program, Project 4
+//	author...............: Joel Cruz
+//	date.................: 20230116
+//	version..............: 2.0.1
+//	version-note.........: Team Treehouse submission
+//	note.................:	
+//	jsdoc3-documentation.: na
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/* Main styles */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
+
+/* Variables */
+
+:root {
+  --color-win: #78CF82;
+  --color-lose: #D94545;
+  --color-start: #5b85b7;
+  --color-neutral: #445069;
+  --color-neutral-light: #D2D2D2;
+  --color-keys: #37474F;
+  --color-keys-light: #E5E5E5;
+  --font-size-large: 60px;
+  --font-size-medium: 20px;
+  --font-size-small: 16px;
+  --responsive-box-side: 7vw;
+  --transition: all .2s ease-in-out;
+}
+
+::selection  {
+	color: rgba(255, 255, 255, 0);
+}
+
+/* main */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Alegreya Sans SC', 'Montserrat', sans-serif;
+}
+
+body {
+  /* [x] (V1) justify-content: space-evenly; */
+  flex-direction: column;
+  display: flex;
+  height: 100vh; /* (!!!) Important for full-height background img; 100% DNW */
+
+  /* (V2) New/Mod */
+  justify-content: start;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  /*align-items: center;
+  flex-wrap: wrap;*/
+
+  background: 
+	url(../images/records-md.jpg) 
+	center / cover
+	no-repeat
+	rgb(50, 50, 50); 
+	background-blend-mode: multiply;
+}
+
+p	{ 	padding: 0;
+		margin: 0;
+		font-size: var(--font-size-medium);
+}
+
+p.serif {
+	font-family: Brawler, serif;
+	font-size: var(--font-size-medium);
+}
+
+p#song-title {
+	font-size: 11vw;
+}
+
+li, ol, ul {
+  padding: 0;
+  display: inline-block;
+}
+
+/* V2 */
+ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 13vw;
+  margin: 0;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+button {
+  margin: 6px 2px; /* [] V1: 6px; */
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  color: var(--color-keys);
+  font-size: var(--font-size-small); /* [] V1: -medium */
+  background-color: var(--color-keys-light);
+  border-radius: 5px;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+  cursor: pointer;
+
+  /* (V2) */
+  /* height: 7px;
+  width: 7px; */
+}
+
+#btn__reset,
+#btn__easy {
+	width: 200px;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  /* max-height: 900px; */ /* [] removed*/
+  text-align: center;
+
+  /* (V2) New/Mod */
+  width: 100%; /* try % */
+}
+
+.section {
+  width: 100%;
+  padding: 10px;
+}
+
+#phrase ul li{
+  margin-top: 15px; /*15px*/
+}
+
+
+
+/* li { vertical-align: text-top; } */
+
+#songRow1,
+#songRow2 {
+	margin: 0 auto;
+	
+	/* V2 */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+/* Title */
+
+.header {
+  margin-top: 40px;
+  color: #ffffff;
+  font-size: 13vw;
+}
+
+
+/* Phrase */
+
+.letter {
+  font-size: var(--font-size-medium);
+  height: var(--responsive-box-side);
+  width: var(--responsive-box-side);
+  padding: 20px 1px 0 1px; /*20px 1px 0 1px*/
+  margin-right: 2px;
+  color: transparent;
+  background: var(--color-neutral-light);
+  border-radius: 5px;
+}
+
+.space {
+  width: 15px;
+}
+
+/* V2 */
+#phrase li.show.letter {
+  color: #fff;
+  background-color: #4ac0d5;
+  font-size: 20px;
+  height: var(--responsive-box-side);
+  width: var(--responsive-box-side);
+  padding: 20px 1px 0 1px;
+  margin-right: 2px;
+  border-radius: 5px;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+
+  /* (V2) Additions: */
+  margin-top: 2vw;
+  padding-bottom: 0; 
+  padding-top: 0;
+}
+
+/* V2 */
+#phrase li.hide.letter {
+	color: #fff;
+	background-color: #ffffff;
+	font-size: 20px;
+	height: var(--responsive-box-side);
+	width: var(--responsive-box-side);
+	padding: 20px 1px 0 1px;
+	margin-right: 2px;
+	border-radius: 5px;
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
+   
+	/* (V2) Additions: */
+	margin-top: 2vw;
+	padding-bottom: 0; 
+	padding-top: 0;
+}
+
+/* Keyboard */
+#abcdef { visibility: visible; display: block; }
+#qwerty { visibility: hidden; display: none; }
+
+.keyrow {
+  display: flex;
+  justify-content: center;
+}
+
+.chosen {
+  background: #3a3f58;
+  border-radius: 5px;
+  font-size: var(--font-size-small);
+  color: #FFFFFF;
+}
+
+.wrong {
+  background: #f7a964;
+  color: #FFFFFF;
+}
+
+.btn__reset,
+.btn__easy {
+  padding: 16px;
+  margin: 50px auto;
+  background: #f7a964;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  border-bottom: solid 4px rgba(0, 0, 0, .3);
+  border-right: solid 3px rgba(0, 0, 0, .3)
+}
+
+.btn__reset:active,
+.btn__easy:active {
+  padding: 14px 16px 16px 14px;
+  border-bottom: solid 4px rgba(0, 0, 0, 0);
+  border-right: solid 3px rgba(0, 0, 0, 0);
+}
+
+
+/* Overlay */
+
+#overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  color: #FFFFFF;
+  /* [x] (V1) justify-content: center; Removed */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+
+  /* (V2) New/Mod */
+  justify-content: start;
+  width: 100vw; /* try % */
+  padding: 0 5vw;
+  padding-top: 5vw;
+
+  background: 
+	url(../images/record-player-md.jpg) 
+	center / cover
+	no-repeat
+	rgb(50, 50, 50); 
+	background-blend-mode: multiply;
+}
+
+.title {
+  color: #FFF;
+}
+
+.start {
+  background-color: #3a3f58;
+}
+
+.start a {
+  color: #fff;
+}
+
+.win {
+  background-color: var(--color-win);
+}
+
+.win a {
+  color: var(--color-win);
+}
+
+.lose {
+  background-color: #f5785f;
+}
+
+.lose a {
+  color: var(--color-lose);
+}
+
+@media screen and (min-width: 430px) { #phrase li.show.letter { font-size: 25px; } }
+@media screen and (min-width: 480px) { #phrase li.show.letter { font-size: 30px; } }
+@media screen and (min-width: 600px) { #phrase li.show.letter { font-size: 35px; } }
+@media screen and (min-width: 640px) { #phrase li.show.letter { font-size: 40px; } }
+
+/* (V2) Responsive */
+@media screen and (min-width: 760px) {
+	body 		{ justify-content: space-evenly; }
+	.main-container { justify-content: space-evenly;}
+	#overlay 		{ justify-content: center; }
+	#abcdef { visibility: hidden; display: none; }
+	#qwerty { visibility: visible; display: block; }
+	.letter, 
+	.hide.letter,
+	#phrase li.hide.letter { /* (V1) */
+		font-size: var(--font-size-medium);
+		height: 65px;
+		width: 65px;
+		padding: 20px 1px 0 1px;
+		margin-right: 2px;
+		color: transparent;
+		background: var(--color-neutral-light);
+		border-radius: 5px;
+	   }
+	.show,
+	.show.letter,
+	#phrase li.show.letter { /* (V1) */
+		color: #fff;
+		background-color: #4ac0d5;
+		font-size: var(--font-size-large);
+		height: 65px;
+		width: 65px;
+		padding: 20px 1px 0 1px;
+		margin-right: 2px;
+		border-radius: 5px;
+		-webkit-animation-duration: .5s;
+		animation-duration: .5s;
+
+		/* (V2) Additions: */
+		margin-top: 2vw;
+		padding-bottom: 0; 
+		padding-top: 0;
+	   }
+	button {
+		margin: 6px;
+		font-size: var(--font-size-medium); /* [] V1: -medium */
+	}
+	.chosen {
+		font-size: var(--font-size-medium);
+	}
+	h2.header {
+		margin-top: 40px;
+		font-size: 80px;
+	}
+	h2.title { font-size: 5vw; }
+	p#song-title {	font-size: 5vw; }
+}
+
+
+
+
+
+
+
+

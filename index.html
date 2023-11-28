@@ -1,0 +1,154 @@
+<!--
+//   project-name.........: Song Hunter
+//	project-description..: Object-Oriented Programing Game Application. Guess the song name.
+//   filename.............: index.html
+//	file-description.....: Landing page.
+//	for..................: Team Treehouse Full-Stack Javascript Techdegree Program, Project 4.
+//	author...............: Joel Cruz
+//	date.................: 20230116
+//	version..............: 2.0.1
+//	version-note.........: Team Treehouse submission
+//	note.................:	
+//	jsdoc3-documentation.: na
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Song Hunter</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/styles.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<!-- (V2) Personalized Fonts --><!-- 
+		
+		Font: Alegreya Sans SC -->
+			<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,800,800italic,900,900italic&subset=greek,greek-ext,latin,latin-ext' rel='stylesheet' type='text/css'><!--
+
+		Font: Brawler (Serif) -->	
+			<link href='https://fonts.googleapis.com/css?family=Brawler:400,700&subset=latin' 
+			rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+		<div class="main-container">
+			<div id="overlay" class="start">
+				<h2 class="title">Song Hunter</h2>
+				<h1 id="game-over-message"></h1>
+				<button id="btn__reset">Start Game</button>
+				<!-- (V2) Easy Mode Button -->
+				<button id="btn__easy">Easy Mode</button>
+			</div>
+
+			<div id="banner" class="section">
+				<h2 class="header">Song Hunter</h2>
+			</div>
+
+			<!-- Note: Phrase update target -->
+			<div id="phrase" class="section">
+				<ul></ul>
+			</div>
+
+			<div id="abcdef" class="section" visible>
+				<div class="keyrow">
+					<button class="key">a</button>
+					<button class="key">b</button>
+					<button class="key">c</button>
+					<button class="key">d</button>
+					<button class="key">e</button>
+					<button class="key">f</button>
+
+				</div>
+
+				<div class="keyrow">
+					<button class="key">g</button>
+					<button class="key">h</button>
+					<button class="key">i</button>
+					<button class="key">j</button>
+					<button class="key">k</button>
+					<button class="key">l</button>
+				</div>
+
+				<div class="keyrow">
+					<button class="key">m</button>
+					<button class="key">n</button>
+					<button class="key">o</button>
+					<button class="key">p</button>
+					<button class="key">q</button>
+					<button class="key">r</button>
+				</div>
+
+				<div class="keyrow">
+					<button class="key">s</button>
+					<button class="key">t</button>
+					<button class="key">u</button>
+					<button class="key">v</button>
+					<button class="key">w</button>
+					<button class="key">x</button>
+				</div>
+
+				<div class="keyrow">
+					<button class="key">y</button>
+					<button class="key">z</button>
+				</div>
+			</div>
+
+			<!-- Team Treehouse Keyboard -->
+			<div id="qwerty" class="section" hidden>
+				<div class="keyrow">
+					<button class="key">q</button>
+					<button class="key">w</button>
+					<button class="key">e</button>
+					<button class="key">r</button>
+					<button class="key">t</button>
+					<button class="key">y</button>
+					<button class="key">u</button>
+					<button class="key">i</button>
+					<button class="key">o</button>
+					<button class="key">p</button>
+				</div>
+
+				<div class="keyrow">
+					<button class="key">a</button>
+					<button class="key">s</button>
+					<button class="key">d</button>
+					<button class="key">f</button>
+					<button class="key">g</button>
+					<button class="key">h</button>
+					<button class="key">j</button>
+					<button class="key">k</button>
+					<button class="key">l</button>
+				</div>
+
+				<div class="keyrow">
+					<button class="key">z</button>
+					<button class="key">x</button>
+					<button class="key">c</button>
+					<button class="key">v</button>
+					<button class="key">b</button>
+					<button class="key">n</button>
+					<button class="key">m</button>
+				</div>
+			</div>
+
+			<div id="scoreboard" class="section">
+				<ol>
+					<li class="tries"><img src="images/liveHeart.png" alt="Heart Icon" height="25" width="30"></li>
+					<li class="tries"><img src="images/liveHeart.png" alt="Heart Icon" height="25" width="30"></li>
+					<li class="tries"><img src="images/liveHeart.png" alt="Heart Icon" height="25" width="30"></li>
+					<li class="tries"><img src="images/liveHeart.png" alt="Heart Icon" height="25" width="30"></li>
+					<li class="tries"><img src="images/liveHeart.png" alt="Heart Icon" height="25" width="30"></li>
+				</ol>
+			</div>
+		</div>
+
+	</body>
+    
+	<!-- (V2) Added jquery for animation -->
+	<script type="text/javascript" src="js/jquery-3.6.3.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/Phrase.js"></script>
+	<script type="text/javascript" src="js/Game.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</html>
