@@ -75,6 +75,7 @@
 
 
 ## Devlog
+- `November 28, 2023`: push from host
 - `Month DD, YYYY`
    - Lorem
    	- [ ] Ipsum
